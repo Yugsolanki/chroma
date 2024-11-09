@@ -17,7 +17,7 @@ pub trait ArrowWriteableKey: Key + Default {
     ) -> BlockKeyArrowBuilder;
 }
 
-pub(crate) trait ArrowWriteableValue: Value {
+pub trait ArrowWriteableValue: Value {
     type ReadableValue<'referred_data>: ArrowReadableValue<'referred_data>;
     type OwnedReadableValue;
 
